@@ -1,5 +1,5 @@
 "use client"
-import React, { Component } from 'react'
+import React from 'react'
 
 async function getUsers(id){
 
@@ -8,17 +8,16 @@ async function getUsers(id){
   return data;
 }
 
-async function post() {
+async function post({params}) {
 
-  const id = 2;
-  const POST = await getUsers(id)
+  const POST = await getUsers(params.id)
 
   console.log(POST)
   return (
   <div className='bg-body-secondary'>
 
     <div className=' container pt-2'> 
-      <h1 className='text-center '>Foro: {id}</h1>
+      <h1 className='text-center '>Foro: {params.id}</h1>
       <div className='d-flex gap-3 flex-wrap'>
         {POST.map((post, index) => (
               <div key={index}  className="bg-white p-4 border fs-3" > 

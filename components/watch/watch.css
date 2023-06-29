@@ -81,6 +81,7 @@
 
 #wtc_adventure_img00 {
     width: 30px;
+
 }
 
 #wtc_adventure_img01 {
@@ -115,7 +116,7 @@
     /* background-color: aqua; */
     /* display: flex; */
     height: 100%;
-    /* width: 35%; */
+    width: 70%;
 }
 
 #wtc_series_box {

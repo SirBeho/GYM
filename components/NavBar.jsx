@@ -1,45 +1,32 @@
-"use client"
-import React, { useState,useEffect } from "react";
-import Opciones from '@/components/Opciones';
+'use client'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-
-export default function NavBar() {
-
-  const [activeDiv, setActiveDiv] = useState("");
-  
-  useEffect(() => {
-    console.log(activeDiv);
-  }, [activeDiv]);
-
-
-
-
-  const pages = ["foro","Iphone"];
-
+function BasicExample() {
   return (
-    <div     className="fixed-top" >
-      <Navbar className="z-2 " data-bs-theme="dark" bg="body"  >
-            <Container>
-              <Navbar.Brand href="/" onMouseEnter={() => setActiveDiv(false)} >Home</Navbar.Brand>
-              <Nav className="me-auto">
-              
-                {pages.map((link, index) => (
-                  
-                  <Nav.Link key={index} href={`/${link.toLowerCase()}`} onMouseEnter={() =>setActiveDiv(link) } >{link}</Nav.Link>
-                ))}
-
-              </Nav>
-              
-            </Container>
-           
-      </Navbar>
+    <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-            <Opciones activeDiv={activeDiv} setActiveDiv={setActiveDiv}/>
+        <Navbar.Brand href="/">Home</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/horario">Horario</Nav.Link>
+            <NavDropdown title="Rutinas" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/pierna">Piernas</NavDropdown.Item>
+              <NavDropdown.Item href="#">Brazo</NavDropdown.Item>
+              <NavDropdown.Item href="#">Abdomen</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="/foros">Foros</Nav.Link>
+            
+          </Nav>
+        </Navbar.Collapse>
       </Container>
-      </div>
-  )
+    </Navbar>
+  );
 }
+
+export default BasicExample;
+
+ 

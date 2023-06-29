@@ -1,4 +1,4 @@
-
+"use client"
 import NavBar from '@/components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className} >
+      <body className={inter.className}>
         <NavBar/>
         {children}
       </body>

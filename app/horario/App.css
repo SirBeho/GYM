@@ -1,0 +1,35 @@
+
+
+
+/* Estilos para el contenedor de las tarjeta */
+.cards {
+
+    margin:  5rem auto;
+    max-width: 40rem;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+/* Estilos para la tarjeta */
+.card {
+  width: 250px;
+  border: 2px solid #E0E0E0;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+/* Estilos para el footer */
+.footer a {
+  margin: 5px 10px ;
+  font-size: 1.8rem;
+  padding: 2px;
+  width: 43px;
+  color: white;
+  background-color: #4caf4f48;
+}
+

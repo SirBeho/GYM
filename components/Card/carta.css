@@ -1,0 +1,67 @@
+
+/* carta */
+.carta{
+    position: relative;
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* hader */
+.carta_header{
+    height: 2rem;
+    overflow: hidden; 
+    display: flex;
+    justify-content: end;
+}
+.carta_header img{
+    position: relative;
+    width: 3.2rem;
+    height: 3rem;
+    top: -6px;
+    right: 6.5%;
+}
+
+
+/* cuerpo */
+.cuerpo{
+      
+    border-radius: 10px;
+    background-color: #1d204b;
+    padding: 20px;
+}
+
+/* titulo */
+.cuerpo>div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    
+}
+.cuerpo>div> *{
+    margin: 0px;
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/* Horas */
+.cuerpo> h1{
+    color: aliceblue;
+    margin: 0px;
+    font-weight: 300;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* last horas */
+.cuerpo h3{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #9c9fd2;
+    margin: 0px;
+}
+
+
+
